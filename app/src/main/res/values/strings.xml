@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Habit Tracker</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="welcome_to_monumental_habbit">WELCOME TO\n MONUMENTAL HABBIT</string>
+    <string name="create_new_habit_easily">CREATE NEW\nHABIT EASILY</string>
+    <string name="keep_track_of_your_progress">KEEP TRACK OF YOUR\nPROGRESS</string>
+    <string name="join_a_supportive_community">JOIN A SUPPORTIVE\nCOMMUNITY</string>
+    <string name="get_started">Get Started</string>
+</resources>

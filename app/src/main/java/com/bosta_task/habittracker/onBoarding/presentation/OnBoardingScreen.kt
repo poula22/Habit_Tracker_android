@@ -1,24 +1,18 @@
-package com.bosta_task.habittracker.onboarding.presentation
+package com.bosta_task.habittracker.onBoarding.presentation
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxHeight
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
-import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
-import com.bosta_task.habittracker.onboarding.presentation.components.OnBoardingBottom
-import com.bosta_task.habittracker.onboarding.presentation.components.OnBoardingContent
-import com.bosta_task.habittracker.onboarding.presentation.model.OnBoardingItems
+import com.bosta_task.habittracker.onBoarding.presentation.components.OnBoardingBottom
+import com.bosta_task.habittracker.onBoarding.presentation.components.OnBoardingContent
+import com.bosta_task.habittracker.onBoarding.presentation.model.OnBoardingItems
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)

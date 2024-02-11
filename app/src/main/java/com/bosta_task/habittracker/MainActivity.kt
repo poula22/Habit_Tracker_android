@@ -8,8 +8,8 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.ui.Modifier
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.bosta_task.habittracker.onboarding.presentation.OnBoardingScreen
-import com.bosta_task.habittracker.ui.theme.HabitTrackerTheme
+import com.bosta_task.habittracker.onBoarding.presentation.OnBoardingScreen
+import com.bosta_task.habittracker.core.ui.theme.HabitTrackerTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

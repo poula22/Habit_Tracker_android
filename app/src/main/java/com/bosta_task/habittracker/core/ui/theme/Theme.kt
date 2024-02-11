@@ -1,4 +1,4 @@
-package com.bosta_task.habittracker.ui.theme
+package com.bosta_task.habittracker.core.ui.theme
 
 import android.app.Activity
 import android.os.Build

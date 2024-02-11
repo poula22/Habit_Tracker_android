@@ -1,4 +1,4 @@
-package com.bosta_task.habittracker.onboarding.presentation.model
+package com.bosta_task.habittracker.onBoarding.presentation.model
 
 import com.bosta_task.habittracker.R
 

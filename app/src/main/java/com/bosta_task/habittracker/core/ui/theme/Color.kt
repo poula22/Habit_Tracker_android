@@ -1,4 +1,4 @@
-package com.bosta_task.habittracker.ui.theme
+package com.bosta_task.habittracker.core.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

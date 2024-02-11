@@ -17,6 +17,14 @@ val klasik = FontFamily(
 )
 
 val Typography = Typography(
+    bodySmall = TextStyle(
+        fontFamily = klasik,
+        fontWeight = FontWeight.ExtraLight,
+        fontSize = 14.sp,
+        color = Eclipse,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp
+    ),
     bodyMedium = TextStyle(
         fontFamily = klasik,
         fontWeight = FontWeight.Bold,

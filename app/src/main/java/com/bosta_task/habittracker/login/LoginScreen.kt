@@ -1,6 +1,8 @@
 package com.bosta_task.habittracker.login
 
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -11,6 +13,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -18,6 +22,8 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -27,15 +33,16 @@ import androidx.compose.ui.unit.dp
 import com.bosta_task.habittracker.R
 import com.bosta_task.habittracker.login.components.LoginWithEmailDialog
 import com.bosta_task.habittracker.login.model.LoginState
+import java.nio.file.WatchEvent
 
 @Composable
 fun LoginScreen(
     modifier: Modifier,
     loginState: LoginState,
-    sendLoginEvent: (LoginEvent) -> Unit
+    sendLoginEvent: (LoginEvent) -> Unit,
 ) {
     Box(
-        modifier = modifier
+        modifier = modifier.background(color = MaterialTheme.colorScheme.tertiary),
     ) {
         Image(
             modifier = Modifier
@@ -47,8 +54,9 @@ fun LoginScreen(
             contentDescription = "",
             contentScale = ContentScale.FillBounds
         )
-        Column(modifier = Modifier.fillMaxWidth()) {
-            Spacer(modifier = Modifier.fillMaxHeight(0.3f))
+        Column(modifier = Modifier.fillMaxSize(1f)
+        ) {
+            Spacer(modifier = Modifier.fillMaxHeight(0.2f))
             Text(
                 modifier = Modifier
                     .padding(bottom = 40.dp)
@@ -60,30 +68,55 @@ fun LoginScreen(
             Button(
                 modifier = Modifier
                     .padding(bottom = 8.dp, start = 20.dp, end = 20.dp)
-                    .fillMaxWidth(), onClick = { /*TODO*/ })
+                    .fillMaxWidth(),
+                onClick = { /*TODO*/ },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White
+                )
+            )
             {
-                Row {
+                Row(Modifier.padding(vertical = 4.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+
+                ) {
                     Icon(
-                        modifier = Modifier.size(25.dp),
+                        modifier = Modifier
+                            .size(25.dp)
+                            .padding(top = 4.dp),
                         painter = painterResource(id = R.drawable.ic_google),
                         contentDescription = ""
                     )
-                    Text(text = "Continue with google")
+                    Text(
+                        text = stringResource(R.string.continue_with_google),
+                        style = MaterialTheme.typography.bodyMedium
+                    )
                 }
 
             }
             Button(
                 modifier = Modifier
                     .padding(bottom = 25.dp, start = 20.dp, end = 20.dp)
-                    .fillMaxWidth(), onClick = { /*TODO*/ })
+                    .fillMaxWidth(),
+                onClick = { /*TODO*/ },
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.White
+                )
+            )
             {
-                Row {
+                Row(
+                    Modifier.padding(vertical = 4.dp),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
                     Icon(
-                        modifier = Modifier.size(25.dp),
+                        modifier = Modifier
+                            .size(25.dp)
+                            .padding(top = 4.dp),
                         painter = painterResource(id = R.drawable.ic_facebook),
                         contentDescription = ""
                     )
-                    Text(text = "Continue with facebook")
+                    Text(text = stringResource(R.string.continue_with_facebook), style = MaterialTheme.typography.bodyMedium)
                 }
             }
             LoginWithEmailDialog(
@@ -99,7 +132,7 @@ fun LoginScreen(
                     sendLoginEvent(LoginEvent.ForgetPasswordClicked)
                 },
                 onLogInClicked = {
-                     sendLoginEvent(LoginEvent.LoginClicked)
+                    sendLoginEvent(LoginEvent.LoginClicked)
                 },
                 navigateToForgetPassword = {
                     sendLoginEvent(LoginEvent.ForgetPasswordClicked)
@@ -112,11 +145,14 @@ fun LoginScreen(
     }
 }
 
-@Preview(showSystemUi = true)
+@Preview
 @Composable
 fun LoginPrev() {
-    MaterialTheme(colorScheme = MaterialTheme.colorScheme) {
-        Surface() {
+    MaterialTheme {
+        Surface(
+            modifier = Modifier.fillMaxSize(),
+            color = MaterialTheme.colorScheme.background
+        ) {
             LoginScreen(
                 modifier = Modifier.fillMaxSize(),
                 loginState = LoginState(),

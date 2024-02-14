@@ -64,6 +64,7 @@ fun LoginWithEmailDialog(
             colors = TextFieldDefaults.colors(
                 focusedLeadingIconColor = MaterialTheme.colorScheme.primary,
                 focusedTextColor = MaterialTheme.colorScheme.primary,
+                unfocusedTextColor = MaterialTheme.colorScheme.primary,
                 unfocusedContainerColor = MaterialTheme.colorScheme.tertiary,
                 focusedContainerColor = MaterialTheme.colorScheme.tertiary,
                 unfocusedLeadingIconColor = MaterialTheme.colorScheme.onPrimary,

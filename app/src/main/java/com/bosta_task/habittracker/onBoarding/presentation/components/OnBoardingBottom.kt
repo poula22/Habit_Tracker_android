@@ -1,4 +1,4 @@
-package com.bosta_task.habittracker.onboarding.presentation.components
+package com.bosta_task.habittracker.onBoarding.presentation.components
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
@@ -14,7 +14,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.CornerSize
-import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -23,11 +22,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.core.view.ViewCompat.ScrollIndicators
 import com.bosta_task.habittracker.R
 
 @Composable
@@ -47,7 +44,7 @@ fun OnBoardingBottom(
             Text(
                 text = stringResource(R.string.skip),
                 Modifier.clickable { onSkipClick() },
-                style = MaterialTheme.typography.bodySmall
+                style = MaterialTheme.typography.bodyMedium
             )
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -59,21 +56,21 @@ fun OnBoardingBottom(
             Text(
                 text = stringResource(R.string.next),
                 modifier = Modifier.clickable { onNextClick() },
-                style = MaterialTheme.typography.bodySmall
+                style = MaterialTheme.typography.bodyMedium
             )
         }
     } else {
         Box(modifier = modifier) {
             Button(
                 onClick = { /*TODO*/ },
-                shape = MaterialTheme.shapes.medium.copy(all = CornerSize(8.dp)),
+                shape = MaterialTheme.shapes.medium,
                 modifier = Modifier
                     .align(Alignment.Center)
                     .fillMaxWidth(0.8f)
             ) {
                 Text(
                     text = stringResource(R.string.get_started),
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     modifier = Modifier.padding(8.dp)
                 )
             }

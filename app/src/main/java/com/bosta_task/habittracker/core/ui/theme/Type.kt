@@ -1,4 +1,4 @@
-package com.bosta_task.habittracker.ui.theme
+package com.bosta_task.habittracker.core.ui.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.TextStyle
@@ -18,6 +18,14 @@ val klasik = FontFamily(
 
 val Typography = Typography(
     bodySmall = TextStyle(
+        fontFamily = klasik,
+        fontWeight = FontWeight.ExtraLight,
+        fontSize = 14.sp,
+        color = Eclipse,
+        lineHeight = 16.sp,
+        letterSpacing = 0.5.sp
+    ),
+    bodyMedium = TextStyle(
         fontFamily = klasik,
         fontWeight = FontWeight.Bold,
         fontSize = 17.sp,

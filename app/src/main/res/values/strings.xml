@@ -7,4 +7,15 @@
     <string name="keep_track_of_your_progress">KEEP TRACK OF YOUR\nPROGRESS</string>
     <string name="join_a_supportive_community">JOIN A SUPPORTIVE\nCOMMUNITY</string>
     <string name="get_started">Get Started</string>
+    <string name="login_with_email">Login with email</string>
+    <string name="login">Login</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign up</string>
+    <string name="continue_with_google">Continue with google</string>
+    <string name="continue_with_facebook">Continue with facebook</string>
+    <string name="forget_your_password">FORGET YOUR PASSWORD?</string>
+    <string name="enter_your_registered_email_below_to_receive_password_reset_instruction">Enter your registered email below to receive password reset instruction</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="remember_password">Remember password?</string>
 </resources>

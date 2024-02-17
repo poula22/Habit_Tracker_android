@@ -1,4 +1,4 @@
-package com.bosta_task.habittracker.ui.theme
+package com.bosta_task.habittracker.core.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -20,7 +20,7 @@ private val DarkColorScheme = darkColorScheme(
     primary = Morning,
     onPrimary = Eclipse,
     secondary = SunSet,
-    tertiary = Twilight,
+    tertiary = Color(0xFFFFF6ED),
     background = Color.White
 )
 
@@ -28,7 +28,7 @@ private val LightColorScheme = lightColorScheme(
     primary = Morning,
     onPrimary = Eclipse,
     secondary = SunSet,
-    tertiary = Twilight,
+    tertiary = Color(0xFFFFF6ED),
     background = Color.White
 
     /* Other default colors to override

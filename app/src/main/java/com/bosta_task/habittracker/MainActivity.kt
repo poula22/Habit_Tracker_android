@@ -18,6 +18,7 @@ import com.bosta_task.habittracker.login.LoginEvent
 import com.bosta_task.habittracker.login.LoginScreen
 import com.bosta_task.habittracker.login.LoginViewModel
 import com.bosta_task.habittracker.login.model.LoginState
+import com.bosta_task.habittracker.navigation.AppNavigation
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,20 +33,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    val viewModel = hiltViewModel<LoginViewModel>()
-                    val loginState by viewModel.loginState.collectAsState()
-                    LoginScreen(
-                        modifier = Modifier.fillMaxWidth(),
-                        loginState = loginState,
-                        sendLoginEvent = {
-                            when(it){
-                                LoginEvent.ForgetPasswordClicked -> TODO()
-                                LoginEvent.LoginClicked -> TODO()
-                                LoginEvent.SignUpClicked -> TODO()
-                                else -> viewModel.onEvent(it)
-                            }
-                        }
-                    )
+                    AppNavigation()
                 }
             }
         }

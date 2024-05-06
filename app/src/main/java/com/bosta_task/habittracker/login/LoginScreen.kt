@@ -37,7 +37,7 @@ import java.nio.file.WatchEvent
 
 @Composable
 fun LoginScreen(
-    modifier: Modifier,
+    modifier: Modifier = Modifier,
     loginState: LoginState,
     sendLoginEvent: (LoginEvent) -> Unit,
 ) {

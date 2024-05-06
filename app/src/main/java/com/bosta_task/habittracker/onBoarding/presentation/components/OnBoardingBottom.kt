@@ -26,6 +26,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.bosta_task.habittracker.R
+import com.bosta_task.habittracker.navigation.NavigationEvent
+import com.bosta_task.habittracker.navigation.Routes
 
 @Composable
 fun OnBoardingBottom(
@@ -33,7 +35,8 @@ fun OnBoardingBottom(
     index: Int,
     size: Int,
     onSkipClick: () -> Unit,
-    onNextClick: () -> Unit
+    onNextClick: () -> Unit,
+    onGetStartClick: (NavigationEvent) -> Unit
 ) {
     if (index < size - 1) {
         Row(
@@ -62,7 +65,11 @@ fun OnBoardingBottom(
     } else {
         Box(modifier = modifier) {
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {
+                          onGetStartClick(
+                              NavigationEvent.Navigate(Routes.LOGIN)
+                          )
+                },
                 shape = MaterialTheme.shapes.medium,
                 modifier = Modifier
                     .align(Alignment.Center)
@@ -110,7 +117,9 @@ fun BottomPreview() {
                 onSkipClick = {},
                 onNextClick = {},
                 modifier = Modifier.width(300.dp)
-            )
+            ){
+
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
+import com.bosta_task.habittracker.navigation.NavigationEvent
 import com.bosta_task.habittracker.onBoarding.presentation.components.OnBoardingBottom
 import com.bosta_task.habittracker.onBoarding.presentation.components.OnBoardingContent
 import com.bosta_task.habittracker.onBoarding.presentation.model.OnBoardingItems
@@ -18,7 +19,8 @@ import kotlinx.coroutines.launch
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnBoardingScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    onNavigation: (NavigationEvent) -> Unit
 ) {
     val size = remember {
         OnBoardingItems.items.size
@@ -44,7 +46,8 @@ fun OnBoardingScreen(
                 if (pageState.currentPage + 1 <size) scope.launch {
                     pageState.scrollToPage(pageState.currentPage+1)
                 }
-            }
+            },
+            onGetStartClick = onNavigation
         )
     }
 }
